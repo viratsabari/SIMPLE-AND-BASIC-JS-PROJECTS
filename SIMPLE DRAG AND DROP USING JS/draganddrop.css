@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f0f0f0 0%, #c2e9fb 100%);
+    animation: backgroundShift 8s infinite alternate ease-in-out;
+}
+
+@keyframes backgroundShift {
+    0% {
+        background: linear-gradient(135deg, #f0f0f0 0%, #c2e9fb 100%);
+    }
+    100% {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    }
+}
+
+.container {
+    display: flex;
+    width: 800px;
+    height: 400px;
+    background-color: #fff;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    transition: border 0.5s ease;
+}
+
+.container:hover {
+    border-color: #f5576c;
+}
+
+.left, .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5f7fa;
+    transition: background-color 0.5s ease;
+}
+
+.left {
+    background-color: #ffecd2;
+}
+
+.right {
+    background-color: #d4fc79;
+}
+
+.left:hover, .right:hover {
+    background-color: #d1ffd0;
+}
+
+.list {
+    width: 100px;
+    height: 100px;
+    background-color: #f093fb;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    border-radius: 20px;
+    cursor: grab;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transform-origin: center;
+}
+
+.list:hover {
+    transform: scale(1.2) rotate(5deg);
+    background-color: #f5576c;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.list:active {
+    cursor: grabbing;
+    transition: none;
+}
+
+.dragging {
+    opacity: 0.5;
+    transform: scale(1.1) rotate(10deg);
+    transition: transform 0.2s ease;
+}
+
+.dropped {
+    animation: bounce 0.5s ease-out;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1.1) translateY(-10px);
+    }
+    50% {
+        transform: scale(0.9) translateY(10px);
+    }
+    100% {
+        transform: scale(1) translateY(0);
+    }
+}
