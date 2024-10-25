@@ -52,6 +52,7 @@ password.addEventListener('input', (e) => {
             if (spicialcasepatturn.test(validate)) {
                 if (numberpatturn.test(validate)) {
                     p.textContent="Password is strong";
+                     p.style.color="green"
                     pwdstrength.appendChild(p);
 
                 } else {
