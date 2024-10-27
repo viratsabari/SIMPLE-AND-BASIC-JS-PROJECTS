@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); 
+}
+
+.container {
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.questions1{
+   
+    width: 600px;
+    height: 500px;
+    background: linear-gradient(to bottom, rgba(42, 157, 143, 0.9), rgba(231, 111, 81, 0.8));
+    position: absolute;
+    top: 70px;
+    left: 350px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.questions2,
+.questions3,
+.questions4,
+.questions5 {
+    display: none;
+    width: 600px;
+    height: 500px;
+    background: linear-gradient(to bottom, rgba(42, 157, 143, 0.9), rgba(231, 111, 81, 0.8));
+    position: absolute;
+    top: 50px;
+    left: 350px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.questions1:hover,
+.questions2:hover,
+.questions3:hover,
+.questions4:hover,
+.questions5:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+.questions1>p,
+.questions2>p,
+.questions3>p,
+.questions4>p,
+.questions5>p {
+    background: rgba(173, 216, 230, 0.8);
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
+}
+
+.questions1>p:hover,
+.questions2>p:hover,
+.questions3>p:hover,
+.questions4>p:hover,
+.questions5>p:hover {
+    background-color: rgba(102, 217, 232, 0.9);
+    transform: translateY(-2px);
+}
+
+.questions1>p:active,
+.questions2>p:active,
+.questions3>p:active,
+.questions4>p:active,
+.questions5>p:active {
+    background-color: rgba(91, 188, 190, 0.9);
+}
+
+button {
+    margin-top: 20px;
+    margin-left: 180px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(130, 255, 105, 0.9);
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: rgba(153, 255, 127, 0.9);
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: rgba(128, 204, 111, 0.9);
+}
+#heading{
+    position: absolute;
+    top: 4px;
+    left: 410px;
+    color: rgb(251, 255, 127);
+}
+h1{
+    margin-left: 10px;
+}
